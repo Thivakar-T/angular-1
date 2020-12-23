@@ -1,0 +1,33 @@
+<div class="container">
+        
+    <div class="text-center">
+        <label for="name">
+            <h1>PRODUCT LIST</h1>
+        </label>
+    </div>
+    <div class="offset-10">
+            <a [routerLink]="['/car']"><i class='bx bx-list-plus iconss' style='color:rgba(4,102,200,0.79) ;font-size: 40px;' ></i></a>
+    </div>
+    <table class="table table-bordered   text-center mt-5">
+        <thead class="bg-dark text-light">
+            <tr id="list_head">
+                <th class="text-center">Product Name </th>
+                <th class="text-center">Product Code</th>
+                <th class="text-center">Hs Code</th>
+                <th class="text-center">Update/delete</th>
+            </tr>
+        
+        </thead>
+        <tbody id="displayTable">
+            <tr *ngFor="let rows of studentArr">
+                <td>{{rows.name}}</td>
+                <td>{{rows.code}}</td>
+                <td>{{rows.hscode}}</td>
+                <!-- <td>{{rows.dateOfBirth}}</td> -->
+                <td> <button class="btn btn-primary" routerLink = '/car/{{rows.id}}'>Edit</button>
+                    <button class="btn btn-dark ml-2" (click) = "get(rows.id)">Delete</button></td>
+                 <!-- <td><button class="btn btn-dark" (click) = "get(rows.id)">Delete</button></td> -->
+              </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,76 @@
+<div class="container">
+    <div>
+        <h1 class="text-center">PRODUCT</h1>
+    </div>
+    <form onsubmit="return false " method="post">
+        <div class="row py-5">
+            <div class="col-4 py-3">
+                <label for="category1">Product Category<sup class="text-danger">*</sup></label>
+                <select type="text" class="form-control" [(ngModel)]="cars.category" id="category"  name="category" placeholder="Choose..">
+                    <option value="">Choose..</option>
+                    <option value="1">Product Category1</option>
+                    <option value="2">Product Category2</option>
+                    <option value="3">Product Category3</option>
+                </select>
+            </div>
+            <div class="col-4 py-3">
+                <label for="code1">Product Code<sup class="text-danger">*</sup></label>
+                <input type="number" class="form-control " [(ngModel)]="cars.code" id="code" placeholder="Product Code" name="code">
+            </div>
+            <div class="col-4 py-3">
+                <label for="name1">Product Name<sup class="text-danger">*</sup></label>
+                <input type="text" class="form-control " [(ngModel)]="cars.name" id="name" placeholder="Product Name" name="name">
+            </div>
+            <div class="col-4 py-3">
+                <label for="hscode1">Hs Code<sup class="text-danger">*</sup></label>
+                <input type="text" class="form-control  " [(ngModel)]="cars.hscode" id="hscode" placeholder="Hs Code" name="hscode">
+            </div>
+            <div class="col-4 py-3">
+                <label for="">Product UOM<sup class="text-danger">*</sup></label>
+                <div class="py-2">
+                    <div class="form-check-inline">
+                        <input class="form-check-input radioBtnClass" [(ngModel)]="cars.optradio" type="radio" name="optradio" id="radio1"
+                            value="option1">
+                        <label class="form-check-label" for="radio1">Kilogram</label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input radioBtnClass" [(ngModel)]="cars.optradio" type="radio" name="optradio" id="radio2"
+                            value="option2">
+                        <label class="form-check-label" for="radio2">Litter</label>
+                    </div>
+                    <div class="form-check-inline">
+                        <input class="form-check-input radioBtnClass" [(ngModel)]="cars.optradio" type="radio" name="optradio" id="radio3"
+                            value="option3">
+                        <label class="form-check-label" for="radio3">Pices</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 py-3">
+                <label for="threshold1">Threshold Quantity<sup class="text-danger">*</sup></label>
+                <input type="text" [(ngModel)]="cars.threshold" class="form-control  " id="threshold" placeholder="Threshold Quantity" name="threshold">
+            </div>
+            <div class="col-4 py-3">
+                <label for="initial1">Initial Quantity<sup class="text-danger">*</sup></label>
+                <input type="text" [(ngModel)]="cars.initial" class="form-control " id="initial" placeholder="Initial Quantity" name="initial">
+            </div>
+            <div class="col-4 py-3">
+                <label for="purchase1">Purchase Rate<sup class="text-danger">*</sup></label>
+                <input type="number" [(ngModel)]="cars.purchase" class="form-control " id="purchase" placeholder="Purchase Rate" name="purchase">
+            </div>
+            <div class="col-4 py-3">
+                <label for="sales1">Sales Rate<sup class="text-danger">*</sup></label>
+                <input type="number" [(ngModel)]="cars.sales" class="form-control  " id="sales" placeholder="Sales Rate" name="sales">
+            </div>
+            <div class="col-4 py-3">
+                <label for="description1">Description<sup class="text-danger">*</sup></label>
+                <textarea type="text" [(ngModel)]="cars.description"  class="form-control " id="description" placeholder="" name="description"></textarea>
+            </div>
+            <div class="py-3 offset-0 offset-md-9">
+                <input id="Submit" type="submit" class="border border-success rounded text-light bg-success m-3  py-3 px-4 c"
+                    value="Submit" (click)="submit()">
+                <input type="reset" class=" border border-danger rounded bg-danger text-light px-4 py-3 m-3 v"
+                    value="Reset " (click)="reset()">
+            </div>
+        </div>
+    </form>
+</div>
